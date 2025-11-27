@@ -1,55 +1,74 @@
-<header class="gallery-header">
-    <nav class="top-nav">
-        <a href="https://myoseon.kr" class="home-link">Home</a>
-    </nav>
-    <h1 class="gallery-title">Myoseon's Photo</h1>
-    <p class="gallery-subtitle">순간의 기록, 영원한 기억</p>
-</header>
+<!DOCTYPE html>
+<html lang="ko">
 
-<main class="gallery-container">
-    <div class="photo-grid">
-        <div class="photo-item" onclick="openModal('assets/images/photo1.png', '빛과 그림자', 'Monochrome, 2024')">
-            <img src="assets/images/photo1.png" alt="Photo 1">
-            <div class="photo-overlay">
-                <div class="photo-info">
-                    <h3>빛과 그림자</h3>
-                    <p>Monochrome</p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myoseon Photo Exhibition</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="sunlight-overlay"></div>
+
+    <header class="gallery-header">
+        <nav class="top-nav">
+            <a href="https://myoseon.kr" class="home-link">Home</a>
+        </nav>
+        <h1 class="gallery-title">Myoseon's Photo</h1>
+        <p class="gallery-subtitle">순간의 기록, 영원한 기억</p>
+    </header>
+
+    <main class="gallery-container">
+        <div class="photo-grid">
+            <div class="photo-item" onclick="openModal('assets/images/photo1.png', '빛과 그림자', 'Monochrome, 2024')">
+                <img src="assets/images/photo1.png" alt="Photo 1">
+                <div class="photo-overlay">
+                    <div class="photo-info">
+                        <h3>빛과 그림자</h3>
+                        <p>Monochrome</p>
+                    </div>
+                </div>
+            </div>
+            <div class="photo-item" onclick="openModal('assets/images/photo2.png', '안개 낀 숲', 'Landscape, 2024')">
+                <img src="assets/images/photo2.png" alt="Photo 2">
+                <div class="photo-overlay">
+                    <div class="photo-info">
+                        <h3>안개 낀 숲</h3>
+                        <p>Landscape</p>
+                    </div>
+                </div>
+            </div>
+            <div class="photo-item" onclick="openModal('assets/images/photo3.png', '시선', 'Portrait, 2024')">
+                <img src="assets/images/photo3.png" alt="Photo 3">
+                <div class="photo-overlay">
+                    <div class="photo-info">
+                        <h3>시선</h3>
+                        <p>Portrait</p>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="photo-item" onclick="openModal('assets/images/photo2.png', '안개 낀 숲', 'Landscape, 2024')">
-            <img src="assets/images/photo2.png" alt="Photo 2">
-            <div class="photo-overlay">
-                <div class="photo-info">
-                    <h3>안개 낀 숲</h3>
-                    <p>Landscape</p>
-                </div>
-            </div>
-        </div>
-        <div class="photo-item" onclick="openModal('assets/images/photo3.png', '시선', 'Portrait, 2024')">
-            <img src="assets/images/photo3.png" alt="Photo 3">
-            <div class="photo-overlay">
-                <div class="photo-info">
-                    <h3>시선</h3>
-                    <p>Portrait</p>
-                </div>
+    </main>
+
+    <div id="image-modal" class="modal" hidden>
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal()">&times;</button>
+            <img id="modal-image" src="" alt="">
+            <div class="modal-info">
+                <h2 id="modal-title"></h2>
+                <p id="modal-desc"></p>
             </div>
         </div>
     </div>
-</main>
 
-<div id="image-modal" class="modal" hidden>
-    <div class="modal-content">
-        <button class="close-btn" onclick="closeModal()">&times;</button>
-        <img id="modal-image" src="" alt="">
-        <div class="modal-info">
-            <h2 id="modal-title"></h2>
-            <p id="modal-desc"></p>
-        </div>
-    </div>
-</div>
-
-<script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
